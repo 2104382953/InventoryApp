@@ -33,7 +33,25 @@ namespace InventoryApp
         {
 
             Inventory inventoryItem = new Inventory();
+
+            //Replaced y line 52
+            /*if(InventoryList.Count > 0)
+            {
+                inventoryItem.ID = InventoryList.Max(x => x.ID) + 1;
+            }else
+            {
+                inventoryItem.ID = 1;
+            }*/
+
+            /*
+             Lines 37 - 43 are the same as line 49.
+             ? replaces if
+             : replaces else
+             inventoryItemID = (The condition if true)?(The value assigned if true):(The value assigned if false) 
+             */
             inventoryItem.ID = InventoryList.Count > 0 ? InventoryList.Max(x => x.ID) + 1 : 1;
+
+
             inventoryItem.Name = inputBox.Text;
             InventoryList.Add(inventoryItem);
 
