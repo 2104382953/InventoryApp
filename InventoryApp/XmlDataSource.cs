@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,18 +47,27 @@ namespace InventoryApp
 
         public BindingList<Inventory> GetXmlIntoList()
         {
-            XElement xmlData = XElement.Load(strDataSource);
+            //Check to see if the Data Source file exists
+            if (File.Exists(strDataSource))
+            {
 
-            var xmlDataList = xmlData.Elements("InventoryItem")
-                            .Select(x => new Inventory()
-                            {
-                                ID = (int)x.Attribute("ID"),
-                                Name = (string)x.Element("Name")
-                            }).ToList();
+                XElement xmlData = XElement.Load(strDataSource);
+
+                var xmlDataList = xmlData.Elements("InventoryItem")
+                                .Select(x => new Inventory()
+                                {
+                                    ID = (int)x.Attribute("ID"),
+                                    Name = (string)x.Element("Name")
+                                }).ToList();
 
 
-            //Assiging the value to our list
-            InventoryList = new BindingList<Inventory>(xmlDataList);
+                //Assiging the value to our list
+                InventoryList = new BindingList<Inventory>(xmlDataList);
+            }
+            else
+            {
+                InventoryList = new BindingList<Inventory>();
+            }
             return InventoryList;
         }
     }
