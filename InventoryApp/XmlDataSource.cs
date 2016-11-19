@@ -57,7 +57,8 @@ namespace InventoryApp
                                 .Select(x => new Inventory()
                                 {
                                     ID = (int)x.Attribute("ID"),
-                                    Name = (string)x.Element("Name")
+                                    Name = (string)x.Element("Name"),
+                                    Description = (string)x.Element("Description")
                                 }).ToList();
 
 

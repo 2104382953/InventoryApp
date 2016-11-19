@@ -35,6 +35,7 @@
             this.btnRemoveInventory = new System.Windows.Forms.Button();
             this.btnAddInventory = new System.Windows.Forms.Button();
             this.lstBoxInventory = new System.Windows.Forms.ListBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +50,7 @@
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(177, 113);
+            this.inputBox.Location = new System.Drawing.Point(145, 113);
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(251, 20);
             this.inputBox.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             // btnRemoveInventory
             // 
-            this.btnRemoveInventory.Location = new System.Drawing.Point(272, 139);
+            this.btnRemoveInventory.Location = new System.Drawing.Point(304, 206);
             this.btnRemoveInventory.Name = "btnRemoveInventory";
             this.btnRemoveInventory.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveInventory.TabIndex = 5;
@@ -76,7 +77,7 @@
             // 
             // btnAddInventory
             // 
-            this.btnAddInventory.Location = new System.Drawing.Point(353, 139);
+            this.btnAddInventory.Location = new System.Drawing.Point(385, 206);
             this.btnAddInventory.Name = "btnAddInventory";
             this.btnAddInventory.Size = new System.Drawing.Size(75, 23);
             this.btnAddInventory.TabIndex = 6;
@@ -87,17 +88,26 @@
             // lstBoxInventory
             // 
             this.lstBoxInventory.FormattingEnabled = true;
-            this.lstBoxInventory.Location = new System.Drawing.Point(145, 198);
+            this.lstBoxInventory.Location = new System.Drawing.Point(145, 235);
             this.lstBoxInventory.Name = "lstBoxInventory";
             this.lstBoxInventory.Size = new System.Drawing.Size(316, 108);
             this.lstBoxInventory.TabIndex = 7;
             this.lstBoxInventory.SelectedIndexChanged += new System.EventHandler(this.lstBoxInventory_SelectedIndexChanged);
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(145, 139);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(315, 61);
+            this.txtDescription.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 442);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lstBoxInventory);
             this.Controls.Add(this.btnAddInventory);
             this.Controls.Add(this.btnRemoveInventory);
@@ -120,6 +130,7 @@
         private System.Windows.Forms.Button btnRemoveInventory;
         private System.Windows.Forms.Button btnAddInventory;
         private System.Windows.Forms.ListBox lstBoxInventory;
+        private System.Windows.Forms.TextBox txtDescription;
     }
 }
 
