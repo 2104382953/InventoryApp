@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InventoryList>
+  <InventoryItem ID="1">
+    <Name>test</Name>
+    <Description />
+  </InventoryItem>
+  <InventoryItem ID="2">
+    <Name>test444</Name>
+    <Description />
+  </InventoryItem>
+  <InventoryItem ID="3">
+    <Name>test3</Name>
+    <Description />
+  </InventoryItem>
+</InventoryList>

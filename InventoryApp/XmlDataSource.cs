@@ -42,31 +42,11 @@ namespace InventoryApp
         }
 
 
-        //public void UpdateXML(BindingList<Inventory> updatedInventoryItem)
-        //{
-        //    var updatedData = updatedInventoryItem.SingleOrDefault();
-        //    XElement xmlData = XElement.Load(strDataSource);
-
-        //    var xmlDataList = xmlData
-        //                     .Elements("InventoryItem")
-        //                     .Where(x => x.Attribute("ID").Value == Convert.ToString(updatedData.ID)).FirstOrDefault();
-
-        //    xmlDataList.SetElementValue("Name", updatedData.Name);
-        //    xmlDataList.Save(strDataSource);
-         
-                            
-        //}
+ 
 
         public BindingList<Inventory> GetXmlIntoList()
         {
             XElement xmlData = XElement.Load(strDataSource);
-            //var xmlDataList = xmlData.Elements("InventoryItem")
-            //                .Select(x => new Inventory()
-            //                {
-            //                    ID = (int)x.Element("ID")
-            //                }).ToList();
-
-            //List<XElement> xmlDataList = xmlData.Elements("InventoryItem").ToList();
 
             var xmlDataList = xmlData.Elements("InventoryItem")
                             .Select(x => new Inventory()
